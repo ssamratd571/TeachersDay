@@ -34,6 +34,7 @@
 
 .popup-card{
     position: relative;
+    overflow:visible;
 
     width: min(90vw, 420px);
 
@@ -57,6 +58,7 @@
 
     animation: popup .5s ease;
 }
+
 @keyframes popup{
 
 0%{
@@ -75,33 +77,44 @@ opacity:1;
    CLOSE BUTTON
 =========================== */
 
+/* ===========================
+   CLOSE BUTTON
+=========================== */
+
 .close{
+    position:absolute;
+    top:12px;
+    right:12px;
 
-position:absolute;
+    width:40px;
+    height:40px;
 
-top:15px;
-right:20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
-font-size:30px;
+    border:none;
+    outline:none;
 
-background:none;
+    border-radius:50%;
 
-border:none;
+    background:rgba(255,255,255,.15);
 
-cursor:pointer;
+    color:#fff;
 
-color:white;
+    font-size:26px;
+    font-weight:bold;
 
-transition:.3s;
+    cursor:pointer;
 
+    z-index:99999;
+
+    transition:all .3s ease;
 }
 
 .close:hover{
-
-transform:rotate(90deg);
-
-color:red;
-
+    background:#ff4d6d;
+    transform:rotate(90deg) scale(1.1);
 }
 
 /* ===========================
