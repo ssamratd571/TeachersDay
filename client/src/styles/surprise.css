@@ -363,53 +363,46 @@ border-radius:10px;
 @media (max-width:768px){
 
 .popup{
-    align-items:center;
-    justify-content:center;
-    padding:16px;
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+
+    /* Move popup slightly upward */
+    align-items: flex-start;
+
+    padding-top: 70px;
+
+    padding-left: 15px;
+    padding-right: 15px;
+
+    background: rgba(0,0,0,.65);
+
+    overflow-y: auto;
 }
 
 .popup-card{
-    width:95%;
-    max-width:340px;
-    padding:18px;
-    max-height:85vh;
-}
+    width: 95%;
+    max-width: 340px;
 
+    padding: 18px;
+
+    margin: 0;
 }
 
 .popup-photo{
-
-width:160px;
-height:160px;
-
+    width: 90px;
+    height: 90px;
 }
 
 .popup-card h1{
-
-font-size:2rem;
-
+    font-size: 24px;
 }
 
 .popup-card p{
-
-font-size:15px;
-
+    font-size: 15px;
 }
-
-.flowers,
-.hearts{
-
-font-size:22px;
-
-}
-
-.surprise-btn{
-
-width:100%;
-
-font-size:16px;
-
-padding:14px;
 
 }
 
