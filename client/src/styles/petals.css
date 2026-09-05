@@ -1,0 +1,31 @@
+.petal{
+    position:fixed;
+    top:-50px;
+    z-index:3;
+    pointer-events:none;
+    animation:fall linear forwards;
+}
+
+@keyframes fall{
+
+0%{
+transform:translateY(-50px) rotate(0deg);
+}
+
+25%{
+transform:translate(40px,25vh) rotate(120deg);
+}
+
+50%{
+transform:translate(-30px,50vh) rotate(220deg);
+}
+
+75%{
+transform:translate(30px,75vh) rotate(300deg);
+}
+
+100%{
+transform:translate(-20px,110vh) rotate(360deg);
+}
+
+}
