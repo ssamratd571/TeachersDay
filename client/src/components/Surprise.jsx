@@ -35,7 +35,7 @@ export default function Surprise() {
             </div>
 
             <img
-              src="/images/teacher.jpg"
+              src="/images/teacher1.jpg"
               alt="Teacher"
               className="popup-photo"
             />
