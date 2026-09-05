@@ -7,13 +7,15 @@
     top:0;
     left:0;
     width:100%;
-    height:100%;
+    height:100vh;
 
-    background:rgba(0,0,0,.65);
+    background:rgba(0,0,0,.75);
 
     display:flex;
     justify-content:center;
     align-items:center;
+
+    padding:20px;
 
     z-index:9999;
 
@@ -33,12 +35,15 @@
 
     position:relative;
 
-    width:320px;
-    max-width:90%;
+    width:90%;
+    max-width:850px;
 
-    padding:22px;
+    max-height:90vh;
+    overflow-y:auto;
 
-    border-radius:20px;
+    padding:40px;
+
+    border-radius:25px;
 
     text-align:center;
 
@@ -46,17 +51,14 @@
 
     background:rgba(255,255,255,.12);
 
-    backdrop-filter:blur(18px);
+    backdrop-filter:blur(20px);
 
     box-shadow:
     0 0 20px #ff69b4,
-    0 0 35px gold,
-    0 0 50px #00ffff;
+    0 0 40px gold,
+    0 0 60px cyan;
 
     animation:popup .5s ease;
-
-    overflow:hidden;
-
 }
 
 @keyframes popup{
@@ -81,10 +83,10 @@ opacity:1;
 
 position:absolute;
 
-top:12px;
-right:15px;
+top:15px;
+right:20px;
 
-font-size:24px;
+font-size:30px;
 
 background:none;
 
@@ -112,20 +114,22 @@ color:red;
 
 .popup-photo{
 
-width:120px;
-height:120px;
+width:260px;
+height:260px;
 
 object-fit:cover;
 
-border-radius:50%;
+border-radius:20px;
 
-border:4px solid white;
+border:5px solid white;
 
 box-shadow:
-0 0 15px gold,
-0 0 25px hotpink;
+0 0 20px gold,
+0 0 35px hotpink;
 
-margin-bottom:15px;
+margin:0 auto 20px;
+
+display:block;
 
 animation:floatPhoto 3s ease-in-out infinite;
 
@@ -138,7 +142,7 @@ transform:translateY(0);
 }
 
 50%{
-transform:translateY(-8px);
+transform:translateY(-10px);
 }
 
 100%{
@@ -153,11 +157,11 @@ transform:translateY(0);
 
 .popup-card h1{
 
-font-size:28px;
+font-size:3rem;
 
-margin-bottom:15px;
+margin-bottom:20px;
 
-text-shadow:0 3px 10px rgba(0,0,0,.4);
+text-shadow:0 5px 15px rgba(0,0,0,.4);
 
 }
 
@@ -167,11 +171,11 @@ text-shadow:0 3px 10px rgba(0,0,0,.4);
 
 .popup-card p{
 
-font-size:16px;
+font-size:20px;
 
-line-height:1.7;
+line-height:1.8;
 
-margin-bottom:18px;
+margin-bottom:20px;
 
 }
 
@@ -181,9 +185,9 @@ margin-bottom:18px;
 
 .flowers{
 
-font-size:24px;
+font-size:30px;
 
-margin-bottom:15px;
+margin-bottom:20px;
 
 animation:flowerMove 2s infinite alternate;
 
@@ -192,11 +196,11 @@ animation:flowerMove 2s infinite alternate;
 @keyframes flowerMove{
 
 from{
-transform:translateX(-8px);
+transform:translateX(-10px);
 }
 
 to{
-transform:translateX(8px);
+transform:translateX(10px);
 }
 
 }
@@ -207,9 +211,9 @@ transform:translateX(8px);
 
 .hearts{
 
-font-size:24px;
+font-size:30px;
 
-margin-top:15px;
+margin-top:20px;
 
 animation:heartBeat 1.2s infinite;
 
@@ -239,9 +243,9 @@ transform:scale(1);
 
 position:absolute;
 
-bottom:10px;
+bottom:0;
 
-font-size:22px;
+font-size:24px;
 
 animation:floatHeart 6s linear infinite;
 
@@ -249,29 +253,11 @@ opacity:.8;
 
 }
 
-.floating-hearts span:nth-child(1){
-left:10%;
-}
-
-.floating-hearts span:nth-child(2){
-left:30%;
-animation-delay:1s;
-}
-
-.floating-hearts span:nth-child(3){
-left:50%;
-animation-delay:2s;
-}
-
-.floating-hearts span:nth-child(4){
-left:70%;
-animation-delay:3s;
-}
-
-.floating-hearts span:nth-child(5){
-left:90%;
-animation-delay:4s;
-}
+.floating-hearts span:nth-child(1){left:10%;}
+.floating-hearts span:nth-child(2){left:30%;animation-delay:1s;}
+.floating-hearts span:nth-child(3){left:50%;animation-delay:2s;}
+.floating-hearts span:nth-child(4){left:70%;animation-delay:3s;}
+.floating-hearts span:nth-child(5){left:90%;animation-delay:4s;}
 
 @keyframes floatHeart{
 
@@ -285,7 +271,7 @@ opacity:1;
 }
 
 100%{
-transform:translateY(-280px) scale(1.3);
+transform:translateY(-500px) scale(1.4);
 opacity:0;
 }
 
@@ -297,9 +283,9 @@ opacity:0;
 
 .stars{
 
-font-size:20px;
+font-size:24px;
 
-margin-top:15px;
+margin-top:20px;
 
 animation:sparkle 1.5s infinite;
 
@@ -308,7 +294,7 @@ animation:sparkle 1.5s infinite;
 @keyframes sparkle{
 
 0%{
-opacity:.4;
+opacity:.5;
 }
 
 50%{
@@ -317,7 +303,7 @@ transform:scale(1.2);
 }
 
 100%{
-opacity:.4;
+opacity:.5;
 }
 
 }
@@ -328,7 +314,7 @@ opacity:.4;
 
 .surprise-btn{
 
-padding:14px 32px;
+padding:15px 40px;
 
 border:none;
 
@@ -336,7 +322,7 @@ border-radius:40px;
 
 cursor:pointer;
 
-font-size:18px;
+font-size:20px;
 
 font-weight:bold;
 
@@ -350,9 +336,27 @@ transition:.3s;
 
 .surprise-btn:hover{
 
-transform:translateY(-3px) scale(1.05);
+transform:translateY(-5px) scale(1.05);
 
 box-shadow:0 10px 25px rgba(255,215,0,.5);
+
+}
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+.popup-card::-webkit-scrollbar{
+
+width:8px;
+
+}
+
+.popup-card::-webkit-scrollbar-thumb{
+
+background:#FFD700;
+
+border-radius:10px;
 
 }
 
@@ -362,37 +366,47 @@ box-shadow:0 10px 25px rgba(255,215,0,.5);
 
 @media(max-width:768px){
 
+.popup{
+
+padding:10px;
+
+}
+
 .popup-card{
 
-width:280px;
+width:95%;
 
-padding:18px;
+max-width:380px;
+
+max-height:85vh;
+
+padding:20px;
 
 }
 
 .popup-photo{
 
-width:95px;
-height:95px;
+width:160px;
+height:160px;
 
 }
 
 .popup-card h1{
 
-font-size:22px;
+font-size:2rem;
 
 }
 
 .popup-card p{
 
-font-size:14px;
+font-size:15px;
 
 }
 
 .flowers,
 .hearts{
 
-font-size:20px;
+font-size:22px;
 
 }
 
@@ -401,6 +415,8 @@ font-size:20px;
 width:100%;
 
 font-size:16px;
+
+padding:14px;
 
 }
 
